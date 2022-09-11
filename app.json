@@ -1,0 +1,15 @@
+{
+    "pages": [
+      "pages/index/index",
+      "pages/index_adress/index_adress"
+    ],
+    "window": {
+        "backgroundTextStyle": "light", 
+        "navigationBarBackgroundColor": "#D0B686",
+        "navigationBarTitleText": "随申码",
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "custom"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

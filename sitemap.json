@@ -1,0 +1,7 @@
+{
+    "desc": "，，",
+    "rules": [{
+    "action": "disallow",
+    "page": "*"
+    }]
+}

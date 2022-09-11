@@ -1,0 +1,21 @@
+/* pages/index_adress/index_adress.wxss */ 
+page {
+  height: 100%;
+  background: -webkit-linear-gradient(left, #E1C897, #C7AC7D);
+}
+
+.input_text{
+  text-align: center;
+  font-size: 30rpx;
+  margin:20rpx;
+  width: 90%;
+  height: 60rpx;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15rpx; 
+}
+
+.title_text{
+  font-size: 40rpx;
+  font-weight: bold; 
+  margin:20rpx;
+}
