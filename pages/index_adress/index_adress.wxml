@@ -8,9 +8,6 @@
     <text class="title_text" style="margin-top:80rpx">请输入详细地址：</text>
     <input class="input_text" bindinput="input_handler" id='address' value="{{address}}" placeholder="上海市/徐汇区/龙华路3166弄"></input>
  
-
-    
-
     <button type="primary" style="margin-top:300rpx" bindtap="save_address">保存</button>
     <button type="default" style="margin-top: 20rpx; position: relative; left: 0rpx; top: -1rpx" bindtap="exit">返回</button>
 
