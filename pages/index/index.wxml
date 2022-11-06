@@ -1,84 +1,79 @@
 <view class="content" bindtouchstart="touchStart" bindtouchend="touchEnd">
-    <text style="color: white;margin-top: 100rpx;">随申码</text>
+  <text style="color: white;margin-top: 100rpx;">随申码</text>
 
-    <view class="container" style="height: 70%; margin-top:20rpx">
+  <view class="container" style="height: 70%; margin-top:20rpx">
 
-        <image style="width:100%;height:60rpx;" src="../../img/head.jpg" />
-        <image style="width:130rpx;height:130rpx;margin:25rpx" src="../../img/logo_text.jpg" />
-        <image style="width: 140rpx; height: 35rpx; margin: 10rpx" src="../../img/name.jpg" />
-        <image style="width: 260rpx; height: 60rpx; margin: 10rpx 0rpx 30rpx 0rpx" src="../../img/relatives.jpg" />
+    <image style="width:100%;height:60rpx;" src="../../img/head.jpg" />
+    <image style="width:130rpx;height:130rpx;margin:25rpx" src="../../img/logo_text.jpg" />
+    <image style="width: 140rpx; height: 35rpx; margin: 10rpx" src="../../img/name.jpg" />
+    <image style="width: 260rpx; height: 60rpx; margin: 10rpx 0rpx 30rpx 0rpx" src="../../img/relatives.jpg" />
 
-        <view class="time_content">
-          <view class="cur_time">{{Time}}</view>
-          <view class="cur_time_s" style="position: relative; left: 0rpx; top: 2rpx">{{Time_s}}</view>
-        </view>
-
-        <image style="width:380rpx;height:380rpx;" src="../../img/qr_code.jpg" />
-        <!-- <canvas type="2d" style="width: 200px; height: 200px;margin-top: 0rpx; " id="myQrcode"></canvas> -->
-        
-        <text style="font-size: 40rpx;font-weight: bold;color: #19B66E;margin:5rpx" >绿色</text>
-        <!-- 默认显示内容 -->
-        <view wx:if="{{default_address}}" style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-top: 20rpx;">
-          <text style="font-size: 30rpx;font-weight: bold;color: #846654;margin:5rpx" >已支持刷公交、医保</text>
-          <button class="capsule_button" style="width: 130rpx; height: 56rpx; display: block; box-sizing: border-box; padding: 8rpx;margin:5rpx">去配置</button>
-        </view>
-
-        <view wx:if="{{!default_address}}" class="address_block" style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-top: 20rpx;">
-          <text class="address_title" >{{title}}</text>
-          <text class="address_info" >{{address}}</text>
-        </view>
-
-
-
-        <view style="display: flex; flex-direction: row; align-items: flex-end; justify-content: center; width: 550rpx; height: 90rpx; box-sizing: border-box;margin-bottom: 30rpx;">
-          <text style="font-size: 75rpx; font-weight: bold; color: #19B66E; margin: 0rpx; position: relative; left: -4rpx; top: 10rpx" >24</text>
-          <text style="font-size: 30rpx;margin:0rpx">小时内核酸检测结果</text>
-          <text style="font-size: 30rpx;font-weight: bold;color: #19B66E;margin:0rpx" >【阴性】</text>
-        </view>
+    <view class="time_content">
+      <view class="cur_time">{{Time}}</view>
+      <view class="cur_time_s" style="position: relative; left: 0rpx; top: 2rpx">{{Time_s}}</view>
     </view>
 
-    <view class="container" style="height:15%;margin-top: 30rpx;">
-        <!-- bottom icon and name -->
-        <view style="display:flex;flex-direction:row;margin-top: 40rpx;">
-            <view style="display:flex;flex-direction:column;align-items: center;margin-right:60rpx">
-                <image style="width:80rpx;height:80rpx;" src="../../img/vaccines.jpg"/>
-                <text style="font-size: 24rpx;font-weight: bold;margin:10rpx" >疫苗&核酸</text>
-            </view>
+    <image style="width:380rpx;height:380rpx;" src="../../img/qr_code.jpg" />
+    <!-- <canvas type="2d" style="width: 200px; height: 200px;margin-top: 0rpx; " id="myQrcode"></canvas> -->
 
-            <view style="display:flex;flex-direction:column;align-items: center;margin-right:60rpx">
-                <image style="width:80rpx;height:80rpx;" src="../../img/acq_point.jpg"/>
-                <text style="font-size: 24rpx;font-weight: bold;margin:10rpx" >采样点</text>
-            </view>
+    <text style="font-size: 40rpx;font-weight: bold;color: #19B66E;margin:5rpx">绿色</text>
+    <!-- 默认显示内容 -->
+    <view wx:if="{{default_address}}" style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-top: 20rpx;">
+      <text style="font-size: 30rpx;font-weight: bold;color: #846654;margin:5rpx">已支持刷公交、医保</text>
+      <button class="capsule_button" style="width: 130rpx; height: 56rpx; display: block; box-sizing: border-box; padding: 8rpx;margin:5rpx">去配置</button>
+    </view>
 
-            <view style="display:flex;flex-direction:column;align-items: center;margin-right:60rpx">
-                <image style="width:80rpx;height:80rpx;" src="../../img/query.jpg"/>
-                <text style="font-size: 24rpx;font-weight: bold;margin:10rpx" >抗原查询</text>
-            </view> 
+    <view wx:if="{{!default_address}}" class="address_block" style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-top: 20rpx;">
+      <text class="address_title">{{title}}</text>
+      <text class="address_info">{{address}}</text>
+    </view>
 
-            <view style="display:flex;flex-direction:column;align-items: center;">
-                <image style="width:80rpx;height:80rpx;" src="../../img/travel_card.jpg"/>
-                <text style="font-size: 24rpx;font-weight: bold;margin:10rpx" >行程卡</text>
-            </view>
-        </view>
+    <view style="display: flex; flex-direction: row; align-items: flex-end; justify-content: center; width: 550rpx; height: 90rpx; box-sizing: border-box;margin-bottom: 30rpx;">
+      <text style="font-size: 75rpx; font-weight: bold; color: #19B66E; margin: 0rpx; position: relative; left: -4rpx; top: 10rpx">24</text>
+      <text style="font-size: 30rpx;margin:0rpx">小时内核酸检测结果</text>
+      <text style="font-size: 30rpx;font-weight: bold;color: #19B66E;margin:0rpx">【阴性】</text>
+    </view>
+  </view>
 
-        <!-- dot image -->
-        <image style="width:70rpx;height:16rpx;" src="../../img/dot.jpg" />
-        
-        <!-- bottom words -->
-        <view style="display: flex;flex-direction: row;">
-          <text class="bottom_text">常见问题</text>
-          <text class="bottom_text">|</text>
-          <text class="bottom_text">智能客服</text>
-          <text class="bottom_text">|</text>
-          <text class="bottom_text">扫码记录</text>
-          <text class="bottom_text">|</text>
-          <text class="bottom_text">我要申诉</text>      
-        </view>
-    
-     
-    </view> 
+  <view class="container" style="height:15%;margin-top: 30rpx;">
+    <!-- bottom icon and name -->
+    <view style="display:flex;flex-direction:row;margin-top: 40rpx;">
+      <view style="display:flex;flex-direction:column;align-items: center;margin-right:60rpx">
+        <image style="width:80rpx;height:80rpx;" src="../../img/vaccines.jpg" />
+        <text style="font-size: 24rpx;font-weight: bold;margin:10rpx">疫苗&核酸</text>
+      </view>
 
-</view> 
+      <view style="display:flex;flex-direction:column;align-items: center;margin-right:60rpx">
+        <image style="width:80rpx;height:80rpx;" src="../../img/acq_point.jpg" />
+        <text style="font-size: 24rpx;font-weight: bold;margin:10rpx">采样点</text>
+      </view>
+
+      <view style="display:flex;flex-direction:column;align-items: center;margin-right:60rpx">
+        <image style="width:80rpx;height:80rpx;" src="../../img/query.jpg" />
+        <text style="font-size: 24rpx;font-weight: bold;margin:10rpx">抗原查询</text>
+      </view>
+
+      <view style="display:flex;flex-direction:column;align-items: center;">
+        <image style="width:80rpx;height:80rpx;" src="../../img/travel_card.jpg" />
+        <text style="font-size: 24rpx;font-weight: bold;margin:10rpx">行程卡</text>
+      </view>
+    </view>
+
+    <!-- dot image -->
+    <image style="width:70rpx;height:16rpx;" src="../../img/dot.jpg" />
+
+    <!-- bottom words -->
+    <view style="display: flex;flex-direction: row;">
+      <text class="bottom_text">常见问题</text>
+      <text class="bottom_text">|</text>
+      <text class="bottom_text">智能客服</text>
+      <text class="bottom_text">|</text>
+      <text class="bottom_text">扫码记录</text>
+      <text class="bottom_text">|</text>
+      <text class="bottom_text">我要申诉</text>
+    </view>
 
 
+  </view>
 
+</view>

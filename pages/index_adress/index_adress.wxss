@@ -1,21 +1,53 @@
-/* pages/index_adress/index_adress.wxss */ 
+/* pages/index_adress/index_adress.wxss */
 page {
   height: 100%;
-  background: -webkit-linear-gradient(left, #E1C897, #C7AC7D);
 }
-
-.input_text{
+.address_container {
   text-align: center;
-  font-size: 30rpx;
-  margin:20rpx;
-  width: 90%;
-  height: 60rpx;
-  background-color: rgb(255, 255, 255);
-  border-radius: 15rpx; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: white;
+  background-color: #e1c897;
+  width: 94%;
 }
 
-.title_text{
+.checked_address_container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: white;
+  width: 98%;
+  background-color: #15c257fd;
+}
+
+.title_text {
   font-size: 40rpx;
-  font-weight: bold; 
-  margin:20rpx;
+  font-weight: bold;
+  margin-top: 5rpx;
+}
+
+.input_text {
+  text-align: center;
+  font-size: 24rpx;
+  flex-grow: 1;
+  margin: 5rpx;
+  margin-right: 15rpx;
+  width: 80%;
+  height: 50rpx;
+  background-color: #ece3d1;
+  border-radius: 10rpx;
+}
+
+.address_text {
+  text-align: right;
+  font-size: 25rpx;
+  font-weight: bold;
+  margin: 5rpx;
+  margin-left: 10rpx;
 }

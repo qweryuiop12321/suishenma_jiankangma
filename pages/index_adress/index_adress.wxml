@@ -1,17 +1,62 @@
 <!--pages/index_adress/index_adress.wxml-->
+<view class="content">
+  <text style="color: rgb(0, 0, 0);margin-top: 100rpx;">自定义地址</text>
 
+  <view class="{{checked_address==0?'checked_address_container':'address_container'}}" bindtap="ischecked_func" id="0" style="margin-top: 80rpx;align-items: center;align-self: center;">
+    <view style="display: flex;flex-direction: column;align-items: center; margin:20rpx;width:100%">
+      <text class="title_text">家庭地址</text>
+      <view style="display:flex;flex-direction:row;align-items: center;margin: 5rpx;width:100%;">
+        <text class="address_text">标题地址</text>
+        <input class="input_text" bindinput="input_handler" id='title' value="{{title1}}" placeholder="{{title_list[0]}}"></input>
+      </view>
+      <view style="display:flex;flex-direction:row;align-items: center;margin: 5rpx;width: 100%">
+        <text class="address_text">详细地址</text>
+        <input class="input_text" bindinput="input_handler" id='address' value="{{address1}}" placeholder="{{address_list[0]}}"></input>
+      </view>
+    </view>
+  </view>
+  <view class="{{checked_address==1?'checked_address_container':'address_container'}}" bindtap="ischecked_func" id='1' style="margin-top: 20rpx;align-items: center;align-self: center;">
+    <view style="display: flex;flex-direction: column;align-items: center; margin:20rpx;width:100%">
+      <text class="title_text">公司地址</text>
+      <view style="display:flex;flex-direction:row;align-items: center;margin: 5rpx;width:100%;">
+        <text class="address_text">标题地址</text>
+        <input class="input_text" bindinput="input_handler" id='title' value="{{title2}}" placeholder="{{title_list[1]}}"></input>
+      </view>
+      <view style="display:flex;flex-direction:row;align-items: center;margin: 5rpx;width: 100%">
+        <text class="address_text">详细地址</text>
+        <input class="input_text" bindinput="input_handler" id='address' value="{{address2}}" placeholder="{{address_list[1]}}"></input>
+      </view>
+    </view>
+  </view>
 
-<view style="display: flex;flex-direction: column;align-items: center; margin-top:250rpx">
-    <text class="title_text" style="margin:20rpx;">请输入标题：</text>
-    <input class="input_text" bindinput="input_handler"  id='title' value="{{title}}" placeholder="通用"></input>
+  <view class="{{checked_address==2?'checked_address_container':'address_container'}}" bindtap="ischecked_func" id='2' style="margin-top: 20rpx;align-items: center;align-self: center;">
+    <view style="display: flex;flex-direction: column;align-items: center; margin:20rpx;width:100%">
+      <text class="title_text">常用地址1</text>
+      <view style="display:flex;flex-direction:row;align-items: center;margin: 5rpx;width:100%;">
+        <text class="address_text">标题地址</text>
+        <input class="input_text" bindinput="input_handler" id='title' value="{{title3}}" placeholder="{{title_list[2]}}"></input>
+      </view>
+      <view style="display:flex;flex-direction:row;align-items: center;margin: 5rpx;width: 100%">
+        <text class="address_text">详细地址</text>
+        <input class="input_text" bindinput="input_handler" id='address' value="{{address3}}" placeholder="{{address_list[2]}}"></input>
+      </view>
+    </view>
+  </view>
 
-    <text class="title_text" style="margin-top:80rpx">请输入详细地址：</text>
-    <input class="input_text" bindinput="input_handler" id='address' value="{{address}}" placeholder="上海市/徐汇区/龙华路3166弄"></input>
- 
-    <button type="primary" style="margin-top:300rpx" bindtap="save_address">保存</button>
-    <button type="default" style="margin-top: 20rpx; position: relative; left: 0rpx; top: -1rpx" bindtap="exit">返回</button>
+  <view class="{{checked_address==3?'checked_address_container':'address_container'}}" bindtap="ischecked_func" id='3' style="margin-top: 20rpx;align-items: center;align-self: center;">
+    <view style="display: flex;flex-direction: column;align-items: center; margin:20rpx;width:100%">
+      <text class="title_text">常用地址2</text>
+      <view style="display:flex;flex-direction:row;align-items: center;margin: 5rpx;width:100%;">
+        <text class="address_text">标题地址</text>
+        <input class="input_text" bindinput="input_handler" id='title' value="{{title4}}" placeholder="{{title_list[3]}}"></input>
+      </view>
+      <view style="display:flex;flex-direction:row;align-items: center;margin: 5rpx;width: 100%">
+        <text class="address_text">详细地址</text>
+        <input class="input_text" bindinput="input_handler" id='address' value="{{address4}}" placeholder="{{address_list[3]}}"></input>
+      </view>
+    </view>
+  </view>
 
-
+  <button type="primary" style="margin:40rpx;margin-bottom:10rpx" bindtap="save_address">保存</button>
+  <button type="default" style="margin-top: 20rpx;" bindtap="exit">返回</button>
 </view>
-
-
